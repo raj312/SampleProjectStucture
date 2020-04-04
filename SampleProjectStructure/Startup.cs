@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SampleProjectStructure.Services;
+using SampleProjectStructure.Services.Interfaces;
 
 namespace SampleProjectStructure
 {
@@ -26,6 +28,9 @@ namespace SampleProjectStructure
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // add interfaces and services here for dependency injection
+            services.AddScoped<IWeatherForecastService, WeatherForecastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

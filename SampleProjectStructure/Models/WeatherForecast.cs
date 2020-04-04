@@ -1,6 +1,6 @@
 using System;
 
-namespace SampleProjectStructure
+namespace SampleProjectStructure.Models
 {
     public class WeatherForecast
     {
